@@ -19,7 +19,8 @@
     <link type="text/css" href="vendor/leaflet/dist/leaflet.css" rel="stylesheet">
     <link type="text/css" href="css/volt.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
-
+    <link type="text/css" href="vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <link type="text/css" href="vendor/notyf/notyf.min.css" rel="stylesheet">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
