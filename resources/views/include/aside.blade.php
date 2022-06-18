@@ -6,8 +6,9 @@
                         class="card-img-top rounded-circle border-white" alt="Bonnie Green"></div>
                 <div class="d-block">
                     <h2 class="h5 mb-3">Hi, Jane</h2><a href="sign-in"
-                        class="btn btn-secondary btn-sm d-inline-flex align-items-center"><svg class="icon icon-xxs me-1"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        class="btn btn-secondary btn-sm d-inline-flex align-items-center"><svg
+                            class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
                             </path>
@@ -37,26 +38,25 @@
 
 
             {{-- home start --}}
-            <li class="nav-item"><span
-                    class="nav-link collapsed d-flex justify-content-between align-items-center"
+            <li class="nav-item"><span class="nav-link collapsed d-flex justify-content-between align-items-center"
                     data-bs-toggle="collapse" data-bs-target="#submenu-app1"><span><span class="sidebar-icon"><i
                                 class="far fa-home-alt"></i> </span><span class="sidebar-text">Home</span>
-                    </span><span class="link-arrow"><svg class="icon icon-sm" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    </span><span class="link-arrow"><svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                                 clip-rule="evenodd"></path>
                         </svg></span></span>
                 <div class="multi-level collapse" role="list" id="submenu-app1" aria-expanded="false">
                     <ul class="flex-column nav">
-                        <li class="nav-item"><a class="nav-link" href="tables/datatables"><span
+                        <li class="nav-item"><a class="nav-link" href="{{ route('slider')}}"><span
                                     class="sidebar-text-contracted">S</span>
                                 <span class="sidebar-text">Slider</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="tables/bootstrap-tables"><span
+                        <li class="nav-item"><a class="nav-link" href="{{ route('edge') }}"><span
                                     class="sidebar-text-contracted">E</span> <span class="sidebar-text"> Edge
                                 </span></a></li>
 
-                        <li class="nav-item"><a class="nav-link" href="tables/bootstrap-tables"><span
+                        <li class="nav-item"><a class="nav-link" href="{{ route('testimonial') }}"><span
                                     class="sidebar-text-contracted">T</span> <span class="sidebar-text"> Testimonial
                                 </span></a></li>
                     </ul>
@@ -68,12 +68,11 @@
 
 
 
-            <li class="nav-item"><span
-                    class="nav-link collapsed d-flex justify-content-between align-items-center"
+            <li class="nav-item"><span class="nav-link collapsed d-flex justify-content-between align-items-center"
                     data-bs-toggle="collapse" data-bs-target="#submenu-app"><span><span class="sidebar-icon"><i
                                 class="far fa-hand-holding-box"></i> </span><span class="sidebar-text">Services</span>
-                    </span><span class="link-arrow"><svg class="icon icon-sm" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    </span><span class="link-arrow"><svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                                 clip-rule="evenodd"></path>
@@ -92,7 +91,9 @@
             <li class="nav-item"><a href="users" class="nav-link"><span class="sidebar-icon"><i
                             class="far fa-gift"></i> </span><span class="sidebar-text">Offering</span></a></li>
 
-            <li class="nav-item"><a href="users" class="nav-link"><span class="sidebar-icon"><i class="far fa-network-wired"></i> </span><span class="sidebar-text">How it Works</span></a>
+            <li class="nav-item"><a href="users" class="nav-link"><span class="sidebar-icon"><i
+                            class="far fa-network-wired"></i> </span><span class="sidebar-text">How it
+                        Works</span></a>
             </li>
 
 

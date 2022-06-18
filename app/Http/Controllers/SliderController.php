@@ -46,7 +46,7 @@ class SliderController extends Controller
         DB::table('slider_tbl')
             ->where('id', $id)
             ->update(['image_name' => $image_name]);
-        return redirect()->back();
+        return redirect()->back()->with(['store'=>'']);
     }
 
 

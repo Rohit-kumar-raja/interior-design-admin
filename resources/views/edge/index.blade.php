@@ -11,20 +11,20 @@
                                 </path>
                             </svg></a></li>
                     <li class="breadcrumb-item"><a href="#">{{ env('APP_NAME') }}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Sliders</li>
+                    <li class="breadcrumb-item active" aria-current="page">Edge</li>
                 </ol>
             </nav>
-            @include('slider.insert')
+            @include('edge.insert')
 
-    
+
             <div class="d-flex justify-content-between w-100 flex-wrap">
                 <div class="mb-3 mb-lg-0 col-10">
-                    <h1 class="h4">Sliders</h1>
+                    <h1 class="h4">Edge</h1>
 
                 </div>
                 <div class="col-2">
                     <button type="button" class="btn btn-block btn-gray-800 mb-3 btn-sm" data-bs-toggle="modal"
-                    data-bs-target="#modal-default">Add new</button>
+                        data-bs-target="#modal-default">Add new</button>
 
                 </div>
             </div>
@@ -62,10 +62,14 @@
                     <thead class="text-dark">
                         <tr>
                             <th>S.NO</th>
-                            <th>title </th>
-                            <th>sub_title </th>
-                            <th>Image</th>
-                            <th>Image Link </th>
+                            <th>type</th>
+                            <th>PRICE </th>
+                            <th>CONVENIENCE </th>
+                            <th>DESIGN</th>
+                            <th>TIMELINES </th>
+                            <th>QUALITY</th>
+                            <th>WARRANTY </th>
+                            <th>SUPPORT </th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -74,36 +78,40 @@
                     <tfoot class="text-dark">
                         <tr>
                             <th>S.NO</th>
-                            <th>title </th>
-                            <th>sub_title </th>
-                            <th>Image</th>
-                            <th>Image Link </th>
+                            <th>type</th>
+                            <th>PRICE </th>
+                            <th>CONVENIENCE </th>
+                            <th>DESIGN</th>
+                            <th>TIMELINES </th>
+                            <th>QUALITY</th>
+                            <th>WARRANTY </th>
+                            <th>SUPPORT </th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
                         </tr>
                     </tfoot>
                     <tbody>
-                        @foreach ($data as $slider)
+                        @foreach ($data as $edge)
                             <tr>
-
-
                                 <td>{{ $loop->iteration }}</td>
-
-                                <td> {{ $slider->title }} </td>
-                                <td> {{ $slider->sub_title }} </td>
-                                <td><img width="100" src="{{ asset('upload/slider/' . $slider->image_name) }}"></td>
-
-                                <td> {{ $slider->virtual_image_name }} </td>
-                                <td><a href="{{ route('slider') }}/update/{{ $slider->id }}"
-                                        class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a>
+                                <td> {{ $edge->type }} </td>
+                                <td> {{ $edge->PRICE }} </td>
+                                <td> {{ $edge->CONVENIENCE }} </td>
+                                <td> {{ $edge->DESIGN }} </td>
+                                <td> {{ $edge->TIMELINES }} </td>
+                                <td> {{ $edge->QUALITY }} </td>
+                                <td> {{ $edge->WARRANTY }} </td>
+                                <td> {{ $edge->SUPPORT }} </td>
+                                <td><a href="{{ route('edge.edit', $edge->id) }}" class="btn btn-warning btn-sm"><i
+                                            class="far fa-edit"></i></a>
                                 </td>
-                                <td><a href="{{ route('slider') }}/delete/{{ $slider->id }}"
-                                        class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                                <td><a href="{{ route('edge.delete', $edge->id) }}" class="btn btn-danger btn-sm"><i
+                                            class="fas fa-trash-alt"></i></a>
                                 </td>
-                                <td><a href="{{ route('slider') }}/status/{{ $slider->id }}"
-                                        class="btn @if ($slider->is_deleted == 1) btn-success @endif btn-secondary  btn-sm">
-                                        @if ($slider->is_deleted == 1)
+                                <td><a href="{{ route('edge.status', $edge->id) }}"
+                                        class="btn @if ($edge->status == 1) btn-success @endif btn-secondary  btn-sm">
+                                        @if ($edge->status == 1)
                                             Active
                                         @else
                                             Deactive

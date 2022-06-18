@@ -5,22 +5,14 @@
                 <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
                     <li class="breadcrumb-item"><a href="{{ route('dashboard') }}"> <i class="fas fa-home    "></i> </a></li>
                     <li class="breadcrumb-item"><a href="#">{{ env('APP_NAME') }}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Sliders</li>
+                    <li class="breadcrumb-item active" aria-current="page">Testimonial</li>
                 </ol>
             </nav>
-            @include('slider.insert')
-
-
             <div class="d-flex justify-content-between w-100 flex-wrap">
                 <div class="mb-3 mb-lg-0 col-10">
-                    <h1 class="h4">Sliders</h1>
-
+                    <h1 class="h4">Testimonial</h1>
                 </div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-block btn-gray-800 mb-3 btn-sm" data-bs-toggle="modal"
-                        data-bs-target="#modal-default">Add new</button>
 
-                </div>
             </div>
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
@@ -31,62 +23,54 @@
 
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('slider.update') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('testimonial.update') }}" method="POST" enctype="multipart/form-data">
                         <div class="container">
                             <div class="row">
                                 @csrf
                                 <input name="id" type="hidden" value="{{ $data->id }}">
 
                                 <div class="form-group col-sm-4">
-                                    <label for="" class="text-dark"> <b>Title</b> </label>
-                                    <input required name="title" value="{{ $data->title }}" type="text"
-                                        class="form-control" placeholder="Title">
-
+                                    <label for="" class="text-dark"> <b>name</b> </label>
+                                    <input required name="name" value="{{ $data->name }}" type="text"
+                                        class="form-control" placeholder="name">
                                 </div>
-                                <!-- <div class="form-group col-sm-4">
-                                                            <label for="" class="text-dark"> <b>sub_title</b> </label> -->
-                                <input value="{{ $data->sub_title }}" required name="sub_title" type="hidden"
-                                    value="Netaji Subhas Univerty" class="form-control" placeholder="sub_title">
+                                <div class="form-group col-sm-4">
+                                    <label for="" class="text-dark"> <b>design name</b> </label>
+                                    <input value="{{ $data->design_name }}" required name="design_name" type="text"
+                                        class="form-control" placeholder="design_name">
+                                </div>
 
-                                <!-- </div> -->
                                 <div class="form-group col-sm-4">
                                     <label for="" class="text-dark"> <b>image</b> </label>
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <input name="image_name" type="file" class="form-control"
-                                                placeholder="image_name">
-
+                                            <input name="images" accept="image/*" type="file" class="form-control" placeholder="images">
                                         </div>
                                         <div class="col-sm-8">
-                                            <img width="200" src="{{ asset('upload/slider/' . $data->image_name) }}"
+                                            <img width="200" src="{{ asset('upload/testimonial/' . $data->images) }}"
                                                 alt="">
-
                                         </div>
-
                                     </div>
-
                                 </div>
-                                <div class="form-group col-sm-4">
-                                    <label for="" class="text-dark"> <b>Image Link</b> </label>
-                                    <input value="{{ $data->virtual_image_name }}" required name="virtual_image_name"
-                                        type="text" class="form-control" placeholder="virtual_image_name	">
 
+                                <div class="form-group col-sm-4">
+                                    <label for="" class="text-dark"> <b>designation</b> </label>
+                                    <input value="{{ $data->designation }}" required name="designation" type="text"
+                                        class="form-control" placeholder="designation">
                                 </div>
 
 
                                 <div class="form-group col-sm-4">
                                     <label for="" class="text-dark"> <b>status</b> </label>
-                                    <select required name="is_deleted" type="text" class="form-control"
+                                    <select required name="status" type="text" class="form-control"
                                         placeholder="Title">
                                         <option value="1">Active</option>
-
                                         <option value="0">Deactive</option>
-
                                     </select>
                                 </div>
                                 <div class="form-group col-sm-12">
-                                    <label for="" class="text-dark"> <b>Description</b> </label>
-                                    <textarea name="description" id="description" class="form-control" placeholder="description">{{ $data->description }}</textarea>
+                                    <label for="" class="text-dark"> <b>massage</b> </label>
+                                    <textarea name="massage" id="massage" class="form-control" placeholder="massage">{{ $data->massage }}</textarea>
 
                                 </div>
                             </div>
