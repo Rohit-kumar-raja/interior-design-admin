@@ -4,11 +4,11 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="h6 modal-title"> Add Testimonial </h2><button type="button" class="btn-close"
+                <h2 class="h6 modal-title"> Add Category </h2><button type="button" class="btn-close"
                     data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('testimonial.insert') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('category.insert') }}" method="POST" enctype="multipart/form-data">
                     <div class="container">
                         <div class="row">
                             @csrf
@@ -17,21 +17,13 @@
                                 <label for="" class="text-dark"> <b>name</b> </label>
                                 <input required name="name" type="text" class="form-control" placeholder="name">
                             </div>
-                            <div class="form-group col-sm-4">
-                                <label for="" class="text-dark"> <b>design name</b> </label>
-                                <input required name="design_name" type="text" value="" class="form-control"
-                                    placeholder="design name">
-                            </div>
+                        
                             <div class="form-group col-sm-4">
                                 <label for="" class="text-dark"> <b>images</b> </label>
                                 <input accept="image/*" required name="images" type="file" class="form-control"
                                     placeholder="images">
                             </div>
-                            <div class="form-group col-sm-4">
-                                <label for="" class="text-dark"> <b>designation</b> </label>
-                                <input required name="designation" type="text" class="form-control"
-                                    placeholder="designation">
-                            </div>
+                          
 
                             <div class="form-group col-sm-4">
                                 <label for="" class="text-dark"> <b>status</b> </label>
@@ -42,7 +34,7 @@
                                 </select>
                             </div>
                             <div class="form-group col-sm-12">
-                                <label for="" class="text-dark"> <b>massage</b> </label>
+                                <label for="" class="text-dark"> <b> Shor Description </b> </label>
                                 <textarea required name="massage" type="text" class="form-control" placeholder="massage"></textarea>
                             </div>
                         </div>

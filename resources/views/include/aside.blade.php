@@ -79,7 +79,7 @@
                         </svg></span></span>
                 <div class="multi-level collapse" role="list" id="submenu-app" aria-expanded="false">
                     <ul class="flex-column nav">
-                        <li class="nav-item"><a class="nav-link" href="category"><span
+                        <li class="nav-item"><a class="nav-link" href="{{ route('category') }}"><span
                                     class="sidebar-text-contracted">C</span>
                                 <span class="sidebar-text">Category</span></a></li>
                         <li class="nav-item"><a class="nav-link" href="tables/bootstrap-tables"><span

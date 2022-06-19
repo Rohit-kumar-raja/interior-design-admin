@@ -11,15 +11,15 @@
                                 </path>
                             </svg></a></li>
                     <li class="breadcrumb-item"><a href="#">{{ env('APP_NAME') }}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Testimonial</li>
+                    <li class="breadcrumb-item active" aria-current="page">Category</li>
                 </ol>
             </nav>
-            @include('testimonial.insert')
+            @include('category.insert')
 
 
             <div class="d-flex justify-content-between w-100 flex-wrap">
                 <div class="mb-3 mb-lg-0 col-10">
-                    <h1 class="h4">Testimonial</h1>
+                    <h1 class="h4">Category</h1>
 
                 </div>
                 <div class="col-2">
@@ -63,10 +63,8 @@
                         <tr>
                             <th>S.NO</th>
                             <th>name </th>
-                            <th>design_name </th>
                             <th>images</th>
-                            <th>designation </th>
-                            <th>massage</th>
+                            <th>Description</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -76,42 +74,40 @@
                         <tr>
                             <th>S.NO</th>
                             <th>name </th>
-                            <th>design_name </th>
                             <th>images</th>
-                            <th>designation </th>
-                            <th>massage</th>
+                            <th>Description</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
                         </tr>
                     </tfoot>
                     <tbody>
-                        @foreach ($data as $testimonial)
+                        @foreach ($data as $category)
                             <tr>
 
 
                                 <td>{{ $loop->iteration }}</td>
 
-                                <td> {{ $testimonial->name }} </td>
-                                <td> {{ $testimonial->design_name }} </td>
+                                <td> {{ $category->name }} </td>
+                                <td> {{ $category->design_name }} </td>
 
 
-                                <td><img width="100" src="{{ asset('upload/testimonial/' . $testimonial->images) }}">
+                                <td><img width="100" src="{{ asset('upload/category/' . $category->images) }}">
                                 </td>
 
-                                <td> {{ $testimonial->virtual_image_name }} </td>
-                                @include('testimonial.maasage')
-                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default1"
+                                <td> {{ $category->virtual_image_name }} </td>
+                                @include('category.maasage')
+                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default1{{$category->id}}"
                                         class="btn btn-info btn-sm"><i class="far fa-eye"></i></a> </td>
-                                <td><a href="{{ route('testimonial.edit', $testimonial->id) }}"
+                                <td><a href="{{ route('category.edit', $category->id) }}"
                                         class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a>
                                 </td>
-                                <td><a href="{{ route('testimonial.delete', $testimonial->id) }}"
+                                <td><a href="{{ route('category.delete', $category->id) }}"
                                         class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
                                 </td>
-                                <td><a href="{{ route('testimonial.status', $testimonial->id) }}"
-                                        class="btn @if ($testimonial->status == 1) btn-success @endif btn-secondary  btn-sm">
-                                        @if ($testimonial->status == 1)
+                                <td><a href="{{ route('category.status', $category->id) }}"
+                                        class="btn @if ($category->status == 1) btn-success @endif btn-secondary  btn-sm">
+                                        @if ($category->status == 1)
                                             Active
                                         @else
                                             Deactive
