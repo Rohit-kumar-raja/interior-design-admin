@@ -18,6 +18,7 @@
     <link type="text/css" href="vendor/choices.js/public/assets/styles/choices.min.css" rel="stylesheet">
     <link type="text/css" href="vendor/leaflet/dist/leaflet.css" rel="stylesheet">
     <link type="text/css" href="css/volt.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\AllUsersController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\EdgeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TestimonialController;
-
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MessagesController;
 
 Route::get('/', function () {
     return view('pages.dashboard');
@@ -30,6 +32,13 @@ Route::get('/modal', function () {
     return view('slider.index');
 });
 
+Route::get('/signin', function () {
+    return view('pages.examples.sign');
+});
+// Dashboard
+
+// end Dashboard
+Route::get('/', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
 
 // slider start
 Route::get('slider', [SliderController::class, 'index'])->middleware('auth')->name('slider');
@@ -66,6 +75,24 @@ Route::get('category/status/{id}', [CategoryController::class, 'status'])->middl
 Route::get('category/update/{id}', [CategoryController::class, 'edit'])->middleware('auth')->name('category.edit');
 Route::post('category/update', [CategoryController::class, 'update'])->middleware('auth')->name('category.update');
 // category end
+
+// messages start
+Route::get('messages', [MessagesController::class, 'index'])->middleware('auth')->name('messages');
+Route::post('messages', [MessagesController::class, 'store'])->middleware('auth')->name('messages.insert');
+Route::get('messages/delete/{id}', [MessagesController::class, 'destroy'])->middleware('auth')->name('messages.delete');
+Route::get('messages/status/{id}', [MessagesController::class, 'status'])->middleware('auth')->name('messages.status');
+Route::get('messages/update/{id}', [MessagesController::class, 'edit'])->middleware('auth')->name('messages.edit');
+Route::post('messages/update', [MessagesController::class, 'update'])->middleware('auth')->name('messages.update');
+// messages end
+
+// allusers start
+Route::get('allusers', [AllUsersController::class, 'index'])->middleware('auth')->name('allusers');
+Route::post('allusers', [AllUsersController::class, 'store'])->middleware('auth')->name('allusers.insert');
+Route::get('allusers/delete/{id}', [AllUsersController::class, 'destroy'])->middleware('auth')->name('allusers.delete');
+Route::get('allusers/status/{id}', [AllUsersController::class, 'status'])->middleware('auth')->name('allusers.status');
+Route::get('allusers/update/{id}', [AllUsersController::class, 'edit'])->middleware('auth')->name('allusers.edit');
+Route::post('allusers/update', [AllUsersController::class, 'update'])->middleware('auth')->name('allusers.update');
+// allusers end
 
 
 require __DIR__.'/auth.php';
