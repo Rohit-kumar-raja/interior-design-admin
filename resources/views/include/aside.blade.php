@@ -80,7 +80,7 @@
                             class="sidebar-icon"><i class="far fa-comments"></i> </span><span
                             class="sidebar-text">Messages</span> </span><span
                         class="badge badge-sm bg-danger badge-pill notification-count">4</span></a></li>
-            <li class="nav-item"><a href="users" class="nav-link"><span class="sidebar-icon"><i
+            <li class="nav-item"><a href="{{ route('allusers') }}" class="nav-link"><span class="sidebar-icon"><i
                             class="far fa-users"></i> </span><span class="sidebar-text">Users List</span></a></li>
 
             <li class="nav-item"><a href="clients" class="nav-link"><span class="sidebar-icon"><i
@@ -88,7 +88,7 @@
 
             <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
 
-            <li class="nav-item"><a href="clients" class="nav-link"><span class="sidebar-icon"><i
+            <li class="nav-item"><a href="{{ route('contactus') }}" class="nav-link"><span class="sidebar-icon"><i
                             class="far fa-address-book"></i> </span><span class="sidebar-text">Contact us</span></a>
             </li>
             <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>

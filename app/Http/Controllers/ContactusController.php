@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AllUsers;
+use App\Models\Contactus;
 use Exception;
 use Illuminate\Http\Request;
 
-class AllUsersController extends Controller
+class ContactusController extends Controller
 {
-    /**
+      /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $allusers = AllUsers::all();
-        return view('allusers.index', ['data' => $allusers,'url'=>$this->web_url()]);
+        $contactus = Contactus::all();
+        return view('contactus.index', ['data' => $contactus]);
     }
 
     /**
@@ -37,9 +37,9 @@ class AllUsersController extends Controller
      */
     public function store(Request $request)
     {
-        $id =   AllUsers::insertGetId($request->except('_token'));
+        $id =   Contactus::insertGetId($request->except('_token'));
         if ($request->file('images')) {
-            AllUsers::where('id', $id)->update(['images' => $this->insert_image($request->file('images'), 'allusers')]);
+            Contactus::where('id', $id)->update(['images' => $this->insert_image($request->file('images'), 'contactus')]);
         }
         return redirect()->back()->with(['store' => 'Data successfully Saved ']);
     }
@@ -53,12 +53,12 @@ class AllUsersController extends Controller
      */
     public function status($id)
     {
-        $status = AllUsers::find($id);
+        $status = Contactus::find($id);
         if ($status->status == 1) {
-            AllUsers::where('id', $id)->update(['status' => '0']);
+            Contactus::where('id', $id)->update(['status' => '0']);
             return redirect()->back()->with('status', 'Status Successfully Deactivated');
         } else {
-            AllUsers::where('id', $id)->update(['status' => '1']);
+            Contactus::where('id', $id)->update(['status' => '1']);
             return redirect()->back()->with('status1', 'Status Successfully Activated');
         }
     }
@@ -71,8 +71,8 @@ class AllUsersController extends Controller
      */
     public function edit($id)
     {
-        $data = AllUsers::find($id);
-        return view('allusers.update', ["data" => $data,]);
+        $data = Contactus::find($id);
+        return view('contactus.update', ["data" => $data,]);
     }
 
     /**
@@ -85,11 +85,11 @@ class AllUsersController extends Controller
     public function update(Request $request)
     {
         $id = $request->id;
-        AllUsers::where('id', $id)->update($request->except("_token", 'images'));
+        Contactus::where('id', $id)->update($request->except("_token", 'images'));
         if ($request->file('images')) {
-            $this->update_images('allusers', $id, $request->file('images'), 'allusers', 'images');
+            $this->update_images('contactus', $id, $request->file('images'), 'contactus', 'images');
         }
-        return redirect('allusers')->with(['update' => "Data successfully Updated"]);
+        return redirect('contactus')->with(['update' => "Data successfully Updated"]);
     }
 
     /**
@@ -100,13 +100,13 @@ class AllUsersController extends Controller
      */
     public function destroy($id)
     {
-        $image_name = AllUsers::find($id);
+        $image_name = Contactus::find($id);
         $image_name = $image_name->images;
         try {
-            unlink(public_path('upload/allusers/' . $image_name));
+            unlink(public_path('upload/contactus/' . $image_name));
         } catch (Exception $e) {
         }
-        AllUsers::destroy($id);
+        Contactus::destroy($id);
         return redirect()->back()->with(['delete' => 'Data Successfully Deleted']);
     }
 }

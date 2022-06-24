@@ -4,8 +4,8 @@
             <div class="d-block mb-4 mb-md-0">
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
                     <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
-                        <li class="breadcrumb-item"><a href="#"><svg class="icon icon-xxs" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <li class="breadcrumb-item"><a href="#"><svg class="icon icon-xxs" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
                                     </path>
@@ -31,10 +31,9 @@
         <div class="table-settings mb-4">
             <div class="row justify-content-between align-items-center">
                 <div class="col-9 col-lg-8 d-md-flex">
-                    <div class="input-group me-2 me-lg-3 fmxw-300"><span class="input-group-text"><svg
-                                class="icon icon-xs" x-description="Heroicon name: solid/search"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                aria-hidden="true">
+                    <div class="input-group me-2 me-lg-3 fmxw-300"><span class="input-group-text"><svg class="icon icon-xs"
+                                x-description="Heroicon name: solid/search" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd"
                                     d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                                     clip-rule="evenodd"></path>
@@ -104,8 +103,9 @@
                 <thead>
                     <tr>
                         <th class="border-bottom">
-                            <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox" value=""
-                                    id="userCheck55"> <label class="form-check-label" for="userCheck55"></label></div>
+                            <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox"
+                                    value="" id="userCheck55"> <label class="form-check-label"
+                                    for="userCheck55"></label></div>
                         </th>
                         <th class="border-bottom">Name</th>
                         <th class="border-bottom">Date Created</th>
@@ -117,8 +117,9 @@
                 <tbody>
                     <tr>
                         <td>
-                            <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox" value=""
-                                    id="userCheck1"> <label class="form-check-label" for="userCheck1"></label>
+                            <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox"
+                                    value="" id="userCheck1"> <label class="form-check-label"
+                                    for="userCheck1"></label>
                             </div>
                         </td>
                         <td><a href="#" class="d-flex align-items-center"><img
@@ -150,8 +151,8 @@
                                     </svg> <span class="visually-hidden">Toggle Dropdown</span></button>
                                 <div class="dropdown-menu dashboard-dropdown dropdown-menu-start mt-2 py-1"><a
                                         class="dropdown-item d-flex align-items-center" href="#"><svg
-                                            class="dropdown-icon text-gray-400 me-2" fill="currentColor" viewBox="0 0 20 20"
-                                            xmlns="http://www.w3.org/2000/svg">
+                                            class="dropdown-icon text-gray-400 me-2" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd"
                                                 d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z"
                                                 clip-rule="evenodd"></path>
@@ -179,8 +180,9 @@
                     </tr>
                     <tr>
                         <td>
-                            <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox" value=""
-                                    id="userCheck2"> <label class="form-check-label" for="userCheck2"></label>
+                            <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox"
+                                    value="" id="userCheck2"> <label class="form-check-label"
+                                    for="userCheck2"></label>
                             </div>
                         </td>
                         <td><a href="#" class="d-flex align-items-center">
@@ -244,7 +246,8 @@
                     <tr>
                         <td>
                             <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox"
-                                    value="" id="userCheck3"> <label class="form-check-label" for="userCheck3"></label>
+                                    value="" id="userCheck3"> <label class="form-check-label"
+                                    for="userCheck3"></label>
                             </div>
                         </td>
                         <td><a href="#" class="d-flex align-items-center"><img
@@ -306,7 +309,8 @@
                     <tr>
                         <td>
                             <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox"
-                                    value="" id="userCheck4"> <label class="form-check-label" for="userCheck4"></label>
+                                    value="" id="userCheck4"> <label class="form-check-label"
+                                    for="userCheck4"></label>
                             </div>
                         </td>
                         <td><a href="#" class="d-flex align-items-center"><img
@@ -368,7 +372,8 @@
                     <tr>
                         <td>
                             <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox"
-                                    value="" id="userCheck5"> <label class="form-check-label" for="userCheck5"></label>
+                                    value="" id="userCheck5"> <label class="form-check-label"
+                                    for="userCheck5"></label>
                             </div>
                         </td>
                         <td><a href="#" class="d-flex align-items-center"><img
@@ -430,7 +435,8 @@
                     <tr>
                         <td>
                             <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox"
-                                    value="" id="userCheck6"> <label class="form-check-label" for="userCheck6"></label>
+                                    value="" id="userCheck6"> <label class="form-check-label"
+                                    for="userCheck6"></label>
                             </div>
                         </td>
                         <td><a href="#" class="d-flex align-items-center">
@@ -494,7 +500,8 @@
                     <tr>
                         <td>
                             <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox"
-                                    value="" id="userCheck7"> <label class="form-check-label" for="userCheck7"></label>
+                                    value="" id="userCheck7"> <label class="form-check-label"
+                                    for="userCheck7"></label>
                             </div>
                         </td>
                         <td><a href="#" class="d-flex align-items-center"><img
@@ -556,7 +563,8 @@
                     <tr>
                         <td>
                             <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox"
-                                    value="" id="userCheck8"> <label class="form-check-label" for="userCheck8"></label>
+                                    value="" id="userCheck8"> <label class="form-check-label"
+                                    for="userCheck8"></label>
                             </div>
                         </td>
                         <td><a href="#" class="d-flex align-items-center"><img
@@ -618,7 +626,8 @@
                     <tr>
                         <td class="border-0">
                             <div class="form-check dashboard-check"><input class="form-check-input" type="checkbox"
-                                    value="" id="userCheck9"> <label class="form-check-label" for="userCheck9"></label>
+                                    value="" id="userCheck9"> <label class="form-check-label"
+                                    for="userCheck9"></label>
                             </div>
                         </td>
                         <td class="border-0"><a href="#" class="d-flex align-items-center">

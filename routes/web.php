@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AllUsersController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\ContactusController;
 use App\Http\Controllers\EdgeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SliderController;
@@ -25,9 +27,7 @@ Route::get('/users', function () {
 });
 
 
-Route::get('/clients', function () {
-    return view('pages.clients.index');
-});
+
 Route::get('/modal', function () {
     return view('slider.index');
 });
@@ -93,6 +93,28 @@ Route::get('allusers/status/{id}', [AllUsersController::class, 'status'])->middl
 Route::get('allusers/update/{id}', [AllUsersController::class, 'edit'])->middleware('auth')->name('allusers.edit');
 Route::post('allusers/update', [AllUsersController::class, 'update'])->middleware('auth')->name('allusers.update');
 // allusers end
+
+
+// clients start
+Route::get('clients', [ClientsController::class, 'index'])->middleware('auth')->name('clients');
+Route::post('clients', [ClientsController::class, 'store'])->middleware('auth')->name('clients.insert');
+Route::get('clients/delete/{id}', [ClientsController::class, 'destroy'])->middleware('auth')->name('clients.delete');
+Route::get('clients/status/{id}', [ClientsController::class, 'status'])->middleware('auth')->name('clients.status');
+Route::get('clients/update/{id}', [ClientsController::class, 'edit'])->middleware('auth')->name('clients.edit');
+Route::post('clients/update', [ClientsController::class, 'update'])->middleware('auth')->name('clients.update');
+// clients end
+
+// contactus start
+Route::get('contactus', [ContactusController::class, 'index'])->middleware('auth')->name('contactus');
+Route::post('contactus', [ContactusController::class, 'store'])->middleware('auth')->name('contactus.insert');
+Route::get('contactus/delete/{id}', [ContactusController::class, 'destroy'])->middleware('auth')->name('contactus.delete');
+Route::get('contactus/status/{id}', [ContactusController::class, 'status'])->middleware('auth')->name('contactus.status');
+Route::get('contactus/update/{id}', [ContactusController::class, 'edit'])->middleware('auth')->name('contactus.edit');
+Route::post('contactus/update', [ContactusController::class, 'update'])->middleware('auth')->name('contactus.update');
+// contactus end
+
+
+
 
 
 require __DIR__.'/auth.php';
