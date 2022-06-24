@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AllUsersController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ClientsController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MessagesController;
+use App\Http\Controllers\OfferingController;
 
 Route::get('/', function () {
     return view('pages.dashboard');
@@ -114,7 +116,23 @@ Route::post('contactus/update', [ContactusController::class, 'update'])->middlew
 // contactus end
 
 
+// about start
+Route::get('about', [AboutController::class, 'index'])->middleware('auth')->name('about');
+Route::post('about', [AboutController::class, 'store'])->middleware('auth')->name('about.insert');
+Route::get('about/delete/{id}', [AboutController::class, 'destroy'])->middleware('auth')->name('about.delete');
+Route::get('about/status/{id}', [AboutController::class, 'status'])->middleware('auth')->name('about.status');
+Route::get('about/update/{id}', [AboutController::class, 'edit'])->middleware('auth')->name('about.edit');
+Route::post('about/update', [AboutController::class, 'update'])->middleware('auth')->name('about.update');
+// about end
+
+// offering start
+Route::get('offering', [OfferingController::class, 'index'])->middleware('auth')->name('offering');
+Route::post('offering', [OfferingController::class, 'store'])->middleware('auth')->name('offering.insert');
+Route::get('offering/delete/{id}', [OfferingController::class, 'destroy'])->middleware('auth')->name('offering.delete');
+Route::get('offering/status/{id}', [OfferingController::class, 'status'])->middleware('auth')->name('offering.status');
+Route::get('offering/update/{id}', [OfferingController::class, 'edit'])->middleware('auth')->name('offering.edit');
+Route::post('offering/update', [OfferingController::class, 'update'])->middleware('auth')->name('offering.update');
+// offering end
 
 
-
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
