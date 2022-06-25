@@ -5,12 +5,12 @@
                 <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
                     <li class="breadcrumb-item"><a href="{{ route('dashboard') }}"> <i class="fas fa-home    "></i> </a></li>
                     <li class="breadcrumb-item"><a href="#">{{ env('APP_NAME') }}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                    <li class="breadcrumb-item active" aria-current="page">Messages</li>
                 </ol>
             </nav>
             <div class="d-flex justify-content-between w-100 flex-wrap">
                 <div class="mb-3 mb-lg-0 col-10">
-                    <h1 class="h4">Contact Us</h1>
+                    <h1 class="h4">Messages</h1>
                 </div>
 
             </div>
@@ -23,7 +23,7 @@
 
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('contactus.update') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('messages.update') }}" method="POST" enctype="multipart/form-data">
                         <div class="container">
                             <div class="row">
                                 @csrf
@@ -47,7 +47,7 @@
                                             <input name="images" accept="image/*" type="file" class="form-control" placeholder="images">
                                         </div>
                                         <div class="col-sm-8">
-                                            <img width="200" src="{{ asset('upload/contactus/' . $data->images) }}"
+                                            <img width="200" src="{{ asset('upload/messages/' . $data->images) }}"
                                                 alt="">
                                         </div>
                                     </div>

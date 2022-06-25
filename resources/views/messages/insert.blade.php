@@ -4,11 +4,11 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="h6 modal-title"> Add Contact Us </h2><button type="button" class="btn-close"
+                <h2 class="h6 modal-title"> Add Messages </h2><button type="button" class="btn-close"
                     data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('contactus.insert') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('messages.insert') }}" method="POST" enctype="multipart/form-data">
                     <div class="container">
                         <div class="row">
                             @csrf
