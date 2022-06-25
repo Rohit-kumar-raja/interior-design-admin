@@ -91,8 +91,7 @@
             <li class="nav-item"><a href="messages"
                     class="nav-link d-flex align-items-center justify-content-between"><span><span
                             class="sidebar-icon"><i class="far fa-comments"></i> </span><span
-                            class="sidebar-text">Messages</span> </span><span
-                        class="badge badge-sm bg-danger badge-pill notification-count">4</span></a>
+                            class="sidebar-text">Messages</span> </span></a>
             </li>
             <li class="nav-item"><a href="{{ route('allusers') }}" class="nav-link"><span class="sidebar-icon"><i
                             class="far fa-users"></i> </span><span class="sidebar-text">Users List</span></a>
