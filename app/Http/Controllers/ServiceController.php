@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\About;
+use App\Models\Service;
 use Exception;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-class AboutController extends Controller
+
+class ServiceController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -15,8 +16,8 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $about = About::all();
-        return view('about.index', ['data' => $about]);
+        $offering = Service::all();
+        return view('offering.index', ['data' => $offering]);
     }
 
     /**
@@ -37,9 +38,9 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        $id =   About::insertGetId($request->except('_token'));
+        $id =   Service::insertGetId($request->except('_token'));
         if ($request->file('images')) {
-            About::where('id', $id)->update(['images' => $this->insert_image($request->file('images'), 'about')]);
+            Service::where('id', $id)->update(['images' => $this->insert_image($request->file('images'), 'offering')]);
         }
         return redirect()->back()->with(['store' => 'Data successfully Saved ']);
     }
@@ -53,12 +54,12 @@ class AboutController extends Controller
      */
     public function status($id)
     {
-        $status = About::find($id);
+        $status = Service::find($id);
         if ($status->status == 1) {
-            About::where('id', $id)->update(['status' => '0']);
+            Service::where('id', $id)->update(['status' => '0']);
             return redirect()->back()->with('status', 'Status Successfully Deactivated');
         } else {
-            About::where('id', $id)->update(['status' => '1']);
+            Service::where('id', $id)->update(['status' => '1']);
             return redirect()->back()->with('status1', 'Status Successfully Activated');
         }
     }
@@ -71,8 +72,8 @@ class AboutController extends Controller
      */
     public function edit($id)
     {
-        $data = About::find($id);
-        return view('about.update', ["data" => $data,]);
+        $data = Service::find($id);
+        return view('offering.update', ["data" => $data,]);
     }
 
     /**
@@ -85,11 +86,11 @@ class AboutController extends Controller
     public function update(Request $request)
     {
         $id = $request->id;
-        About::where('id', $id)->update($request->except("_token", 'images'));
+        Service::where('id', $id)->update($request->except("_token", 'images'));
         if ($request->file('images')) {
-            $this->update_images('abouts', $id, $request->file('images'), 'about', 'images');
+            $this->update_images('offerings', $id, $request->file('images'), 'offering', 'images');
         }
-        return redirect('about')->with(['update' => "Data successfully Updated"]);
+        return redirect('offering')->with(['update' => "Data successfully Updated"]);
     }
 
     /**
@@ -100,13 +101,13 @@ class AboutController extends Controller
      */
     public function destroy($id)
     {
-        $image_name = About::find($id);
+        $image_name = Service::find($id);
         $image_name = $image_name->images;
         try {
-            unlink(public_path('upload/about/' . $image_name));
+            unlink(public_path('upload/offering/' . $image_name));
         } catch (Exception $e) {
         }
-        About::destroy($id);
+        Service::destroy($id);
         return redirect()->back()->with(['delete' => 'Data Successfully Deleted']);
     }
 }

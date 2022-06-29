@@ -134,5 +134,14 @@ Route::get('offering/update/{id}', [OfferingController::class, 'edit'])->middlew
 Route::post('offering/update', [OfferingController::class, 'update'])->middleware('auth')->name('offering.update');
 // offering end
 
+// offering start
+Route::get('services', [servicesController::class, 'index'])->middleware('auth')->name('services');
+Route::post('services', [servicesController::class, 'store'])->middleware('auth')->name('services.insert');
+Route::get('services/delete/{id}', [servicesController::class, 'destroy'])->middleware('auth')->name('services.delete');
+Route::get('services/status/{id}', [servicesController::class, 'status'])->middleware('auth')->name('services.status');
+Route::get('services/update/{id}', [servicesController::class, 'edit'])->middleware('auth')->name('services.edit');
+Route::post('services/update', [servicesController::class, 'update'])->middleware('auth')->name('services.update');
+// services end
+
 
 require __DIR__ . '/auth.php';
