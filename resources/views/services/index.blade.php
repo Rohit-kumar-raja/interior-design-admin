@@ -11,20 +11,19 @@
                                 </path>
                             </svg></a></li>
                     <li class="breadcrumb-item"><a href="#">{{ env('APP_NAME') }}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">offering</li>
+                    <li class="breadcrumb-item active" aria-current="page">services</li>
                 </ol>
             </nav>
-            @include('offering.insert')
 
 
             <div class="d-flex justify-content-between w-100 flex-wrap">
                 <div class="mb-3 mb-lg-0 col-10">
-                    <h1 class="h4">offering</h1>
+                    <h1 class="h4">services</h1>
 
                 </div>
                 <div class="col-2">
-                    <button type="button" class="btn btn-block btn-gray-800 mb-3 btn-sm" data-bs-toggle="modal"
-                        data-bs-target="#modal-default">Add new</button>
+                    <a href="{{ route('services.insert.view') }}" class="btn btn-block btn-gray-800 mb-3 btn-sm">Add
+                        new</a>
 
                 </div>
             </div>
@@ -84,27 +83,27 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        @foreach ($data as $offering)
+                        @foreach ($data as $services)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
 
-                                <td> {{ $offering->name }} </td>
-                                <td> {{ $offering->type }} </td>
-                                <td><img width="100" src="{{ asset('upload/offering/' . $offering->images) }}">
+                                <td> {{ $services->name }} </td>
+                                <td> {{ $services->type }} </td>
+                                <td><img width="100" src="{{ asset('upload/services/' . $services->images) }}">
                                 </td>
 
-                                @include('offering.maasage')
+                                @include('services.maasage')
                                 <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default1"
                                         class="btn btn-info btn-sm"><i class="far fa-eye"></i></a> </td>
-                                <td><a href="{{ route('offering.edit', $offering->id) }}" class="btn btn-warning btn-sm"><i
-                                            class="far fa-edit"></i></a>
+                                <td><a href="{{ route('services.edit', $services->id) }}"
+                                        class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a>
                                 </td>
-                                <td><a href="{{ route('offering.delete', $offering->id) }}" class="btn btn-danger btn-sm"><i
-                                            class="fas fa-trash-alt"></i></a>
+                                <td><a href="{{ route('services.delete', $services->id) }}"
+                                        class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
                                 </td>
-                                <td><a href="{{ route('offering.status', $offering->id) }}"
-                                        class="btn @if ($offering->status == 1) btn-success @endif btn-secondary  btn-sm">
-                                        @if ($offering->status == 1)
+                                <td><a href="{{ route('services.status', $services->id) }}"
+                                        class="btn @if ($services->status == 1) btn-success @endif btn-secondary  btn-sm">
+                                        @if ($services->status == 1)
                                             Active
                                         @else
                                             Deactive

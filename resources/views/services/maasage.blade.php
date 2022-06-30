@@ -8,7 +8,7 @@
                     data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-               {{ $offering->massage }}
+               {{ $services->massage }}
             </div>
 
         </div>

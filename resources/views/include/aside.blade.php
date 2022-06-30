@@ -75,7 +75,7 @@
                         <li class="nav-item"><a class="nav-link" href="{{ route('category') }}"><span
                                     class="sidebar-text-contracted">C</span>
                                 <span class="sidebar-text">Category</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="tables/bootstrap-tables"><span
+                        <li class="nav-item"><a class="nav-link" href="{{ route('services') }}"><span
                                     class="sidebar-text-contracted">S</span> <span class="sidebar-text">All
                                     Services</span></a></li>
                     </ul>

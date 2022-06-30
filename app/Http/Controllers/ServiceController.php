@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Service;
 use Exception;
 use Illuminate\Http\Request;
@@ -16,8 +17,14 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $offering = Service::all();
-        return view('offering.index', ['data' => $offering]);
+        $services = Service::all();
+        return view('services.index', ['data' => $services]);
+    }
+
+    public  function insert()
+    {
+        $category=Category::all();
+        return view('services.insert',['category'=>$category]);
     }
 
     /**
@@ -40,7 +47,7 @@ class ServiceController extends Controller
     {
         $id =   Service::insertGetId($request->except('_token'));
         if ($request->file('images')) {
-            Service::where('id', $id)->update(['images' => $this->insert_image($request->file('images'), 'offering')]);
+            Service::where('id', $id)->update(['images' => $this->insert_image($request->file('images'), 'services')]);
         }
         return redirect()->back()->with(['store' => 'Data successfully Saved ']);
     }
@@ -73,7 +80,7 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $data = Service::find($id);
-        return view('offering.update', ["data" => $data,]);
+        return view('services.update', ["data" => $data,]);
     }
 
     /**
@@ -88,9 +95,9 @@ class ServiceController extends Controller
         $id = $request->id;
         Service::where('id', $id)->update($request->except("_token", 'images'));
         if ($request->file('images')) {
-            $this->update_images('offerings', $id, $request->file('images'), 'offering', 'images');
+            $this->update_images('servicess', $id, $request->file('images'), 'services', 'images');
         }
-        return redirect('offering')->with(['update' => "Data successfully Updated"]);
+        return redirect('services')->with(['update' => "Data successfully Updated"]);
     }
 
     /**
@@ -104,7 +111,7 @@ class ServiceController extends Controller
         $image_name = Service::find($id);
         $image_name = $image_name->images;
         try {
-            unlink(public_path('upload/offering/' . $image_name));
+            unlink(public_path('upload/services/' . $image_name));
         } catch (Exception $e) {
         }
         Service::destroy($id);

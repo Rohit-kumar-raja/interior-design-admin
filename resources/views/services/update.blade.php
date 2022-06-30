@@ -5,12 +5,12 @@
                 <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
                     <li class="breadcrumb-item"><a href="{{ route('dashboard') }}"> <i class="fas fa-home    "></i> </a></li>
                     <li class="breadcrumb-item"><a href="#">{{ env('APP_NAME') }}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">offering</li>
+                    <li class="breadcrumb-item active" aria-current="page">services</li>
                 </ol>
             </nav>
             <div class="d-flex justify-content-between w-100 flex-wrap">
                 <div class="mb-3 mb-lg-0 col-10">
-                    <h1 class="h4">offering</h1>
+                    <h1 class="h4">services</h1>
                 </div>
 
             </div>
@@ -23,7 +23,7 @@
 
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('offering.update') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('services.update') }}" method="POST" enctype="multipart/form-data">
                         <div class="container">
                             <div class="row">
                                 @csrf
@@ -38,7 +38,7 @@
                                         <option disabled > - Select - </option>
 
                                         @endif
-                                       <option value="offering">Offering</option>
+                                       <option value="services">services</option>
                                        <option value="Tested">Tested</option>
                                     </select>
                                 </div>
@@ -56,7 +56,7 @@
                                             <input name="images" accept="image/*" type="file" class="form-control" placeholder="images">
                                         </div>
                                         <div class="col-sm-8">
-                                            <img width="200" src="{{ asset('upload/offering/' . $data->images) }}"
+                                            <img width="200" src="{{ asset('upload/services/' . $data->images) }}"
                                                 alt="">
                                         </div>
                                     </div>

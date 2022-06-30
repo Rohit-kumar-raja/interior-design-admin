@@ -12,32 +12,8 @@ use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\OfferingController;
+use App\Http\Controllers\ServiceController;
 
-Route::get('/', function () {
-    return view('pages.dashboard');
-})->name('dashboard');
-Route::get('/messages', function () {
-    return view('pages.enquiry.messages');
-});
-
-Route::get('/table', function () {
-    return view('pages.tables.datatables');
-});
-
-Route::get('/users', function () {
-    return view('pages.users.index');
-});
-
-
-
-Route::get('/modal', function () {
-    return view('slider.index');
-});
-
-Route::get('/signin', function () {
-    return view('pages.examples.sign');
-});
-// Dashboard
 
 // end Dashboard
 Route::get('/', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
@@ -134,13 +110,15 @@ Route::get('offering/update/{id}', [OfferingController::class, 'edit'])->middlew
 Route::post('offering/update', [OfferingController::class, 'update'])->middleware('auth')->name('offering.update');
 // offering end
 
-// offering start
-Route::get('services', [servicesController::class, 'index'])->middleware('auth')->name('services');
-Route::post('services', [servicesController::class, 'store'])->middleware('auth')->name('services.insert');
-Route::get('services/delete/{id}', [servicesController::class, 'destroy'])->middleware('auth')->name('services.delete');
-Route::get('services/status/{id}', [servicesController::class, 'status'])->middleware('auth')->name('services.status');
-Route::get('services/update/{id}', [servicesController::class, 'edit'])->middleware('auth')->name('services.edit');
-Route::post('services/update', [servicesController::class, 'update'])->middleware('auth')->name('services.update');
+// services start
+Route::get('services', [ServiceController::class, 'index'])->middleware('auth')->name('services');
+Route::post('services', [ServiceController::class, 'store'])->middleware('auth')->name('services.insert');
+Route::get('services/delete/{id}', [ServiceController::class, 'destroy'])->middleware('auth')->name('services.delete');
+Route::get('services/status/{id}', [ServiceController::class, 'status'])->middleware('auth')->name('services.status');
+Route::get('services/update/{id}', [ServiceController::class, 'edit'])->middleware('auth')->name('services.edit');
+Route::post('services/update', [ServiceController::class, 'update'])->middleware('auth')->name('services.update');
+Route::get('services/insert', [ServiceController::class, 'insert'])->middleware('auth')->name('services.insert.view');
+
 // services end
 
 
