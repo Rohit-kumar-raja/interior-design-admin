@@ -61,10 +61,11 @@
                     <thead class="text-dark">
                         <tr>
                             <th>S.NO</th>
-                            <th>name </th>
-                            <th>Type </th>
-                            <th>images</th>
-                            <th>massage</th>
+                            <th>category </th>
+                            <th>Title </th>
+                            <th>youtube</th>
+                            <th>view360</th>
+                            <th>Description</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -73,10 +74,11 @@
                     <tfoot class="text-dark">
                         <tr>
                             <th>S.NO</th>
-                            <th>name </th>
-                            <th>Type </th>
-                            <th>images</th>
-                            <th>massage</th>
+                            <th>category </th>
+                            <th>Title </th>
+                            <th>youtube</th>
+                            <th>view360</th>
+                            <th>Description</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -87,10 +89,11 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
 
-                                <td> {{ $services->name }} </td>
-                                <td> {{ $services->type }} </td>
-                                <td><img width="100" src="{{ asset('upload/services/' . $services->images) }}">
-                                </td>
+                                <td> {{ $services->category }} </td>
+                                <td> {{ $services->log_title }} </td>
+                                <td> {{ $services->youtube }} </td>
+                                <td> {{ $services->view360 }} </td>
+
 
                                 @include('services.maasage')
                                 <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default1"

@@ -118,6 +118,7 @@ Route::get('services/status/{id}', [ServiceController::class, 'status'])->middle
 Route::get('services/update/{id}', [ServiceController::class, 'edit'])->middleware('auth')->name('services.edit');
 Route::post('services/update', [ServiceController::class, 'update'])->middleware('auth')->name('services.update');
 Route::get('services/insert', [ServiceController::class, 'insert'])->middleware('auth')->name('services.insert.view');
+Route::get('services/image/delte/{id}', [ServiceController::class, 'imageDelete'])->middleware('auth')->name('services.image.delete');
 
 // services end
 

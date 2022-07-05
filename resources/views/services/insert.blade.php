@@ -3,7 +3,7 @@
     @slot('body')
         <div class="modal-content mt-5 ">
             <div class="modal-header">
-                <h2 class="h6 modal-title"> Add services </h2>
+                <h2 class="h6 modal-title"> Add services <a class="btn btn-sm btn-secondary" href="{{ route('services') }}"> <i class="fa fa-arrow-left" aria-hidden="true"></i> All services</a> </h2>
             </div>
             @if (session('store'))
                 <div class="alert alert-success">
@@ -84,7 +84,7 @@
 
                             <div class="form-group col-sm-4">
                                 <label for="" class="text-dark"> <b> Title 3</b> </label>
-                                <input required name="title3" type="text" class="form-control" placeholder="name">
+                                <input  name="title3" type="text" class="form-control" placeholder="name">
                             </div>
 
                             <div class="form-group col-sm-8">
@@ -94,7 +94,7 @@
 
                             <div class="form-group col-sm-4">
                                 <label for="" class="text-dark"> <b> Title 4</b> </label>
-                                <input required name="title4" type="text" class="form-control" placeholder="name">
+                                <input  name="title4" type="text" class="form-control" placeholder="name">
                             </div>
 
                             <div class="form-group col-sm-8">
@@ -104,7 +104,7 @@
 
                             <div class="form-group col-sm-4">
                                 <label for="" class="text-dark"> <b> Title 5</b> </label>
-                                <input required name="title5" type="text" class="form-control" placeholder="name">
+                                <input  name="title5" type="text" class="form-control" placeholder="name">
                             </div>
 
                             <div class="form-group col-sm-8">
@@ -121,7 +121,7 @@
                             <div class="form-group col-sm-4">
                                 <label for="" class="text-dark"> <b> <i class="fa-thin fa-360-degrees"></i> 360
                                         view Image Link</b> </label>
-                                <input name="view360" type="text" class="form-control"
+                                <input  name="view360" type="text" class="form-control"
                                     placeholder=" 360 view image link ">
                             </div>
 
@@ -138,7 +138,7 @@
                                 <div class="col-sm-3 imgUp mt-5">
                                     <div class="imagePreview"></div>
                                     <label class="btn btn-primary">
-                                        Upload<input type="file" name="img[]" class="uploadFile img"
+                                        Upload<input type="file"  accept="image/*" name="img[]" class="uploadFile img"
                                             value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
                                     </label>
                                 </div><!-- col-2 -->
@@ -168,7 +168,7 @@
 <script>
     $(".imgAdd").click(function() {
         $(this).closest(".row").find('.imgAdd').before(
-            '<div class="col-sm-3 imgUp mt-5"><div class="imagePreview"></div><label class="btn btn-primary">Upload<input type="file" name="img[]" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fas fa-times del"></i></div>'
+            '<div class="col-sm-3 imgUp mt-5"><div class="imagePreview"></div><label class="btn btn-primary">Upload<input type="file" accept="image/*" name="img[]" class="uploadFile img" value="Upload Photo" style="width:0px;height:0px;overflow:hidden;"></label><i class="fas fa-times del"></i></div>'
         );
     });
     $(document).on("click", "i.del", function() {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Service;
+use App\Models\serviceImage;
 use Exception;
 use Illuminate\Http\Request;
 
@@ -23,8 +24,8 @@ class ServiceController extends Controller
 
     public  function insert()
     {
-        $category=Category::all();
-        return view('services.insert',['category'=>$category]);
+        $category = Category::all();
+        return view('services.insert', ['category' => $category]);
     }
 
     /**
@@ -45,9 +46,12 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        $id =   Service::insertGetId($request->except('_token'));
-        if ($request->file('images')) {
-            Service::where('id', $id)->update(['images' => $this->insert_image($request->file('images'), 'services')]);
+
+        $id =   Service::insertGetId($request->except('_token', 'img'));
+        if ($request->file('img')) {
+            foreach ($request->file('img') as $image) {
+                serviceImage::insertGetId(['name' => $this->insert_image($image, 'services'), 'size' => '0', 'service_id' => $id]);
+            }
         }
         return redirect()->back()->with(['store' => 'Data successfully Saved ']);
     }
@@ -80,7 +84,8 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $data = Service::find($id);
-        return view('services.update', ["data" => $data,]);
+        $category = Category::all();
+        return view('services.update', ["data" => $data, 'category' => $category]);
     }
 
     /**
@@ -93,9 +98,9 @@ class ServiceController extends Controller
     public function update(Request $request)
     {
         $id = $request->id;
-        Service::where('id', $id)->update($request->except("_token", 'images'));
-        if ($request->file('images')) {
-            $this->update_images('servicess', $id, $request->file('images'), 'services', 'images');
+        Service::where('id', $id)->update($request->except("_token", 'img'));
+        foreach ($request->file('img') as $image) {
+            serviceImage::insertGetId(['name' => $this->insert_image($image, 'services'), 'size' => '0', 'service_id' => $id]);
         }
         return redirect('services')->with(['update' => "Data successfully Updated"]);
     }
@@ -115,6 +120,18 @@ class ServiceController extends Controller
         } catch (Exception $e) {
         }
         Service::destroy($id);
+        return redirect()->back()->with(['delete' => 'Data Successfully Deleted']);
+    }
+
+    public function imageDelete($id)
+    {
+        $image_name = serviceImage::find($id);
+        $image_name = $image_name->images;
+        try {
+            unlink(public_path('upload/services/' . $image_name));
+        } catch (Exception $e) {
+        }
+        serviceImage::destroy($id);
         return redirect()->back()->with(['delete' => 'Data Successfully Deleted']);
     }
 }
