@@ -66,7 +66,7 @@
                             <th>design_name </th>
                             <th>images</th>
                            
-                            <th>massage</th>
+                            <th>message</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -79,7 +79,7 @@
                             <th>design_name </th>
                             <th>images</th>
                           
-                            <th>massage</th>
+                            <th>message</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
