@@ -96,7 +96,7 @@
 
 
                                 @include('services.maasage')
-                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default1"
+                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default{{ $services->id}}"
                                         class="btn btn-info btn-sm"><i class="far fa-eye"></i></a> </td>
                                 <td><a href="{{ route('services.edit', $services->id) }}"
                                         class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a>

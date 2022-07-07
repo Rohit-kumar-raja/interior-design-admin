@@ -100,7 +100,7 @@
                                 </td>
 
                                 @include('clients.maasage')
-                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default1"
+                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default{{ $clients->id}}"
                                         class="btn btn-info btn-sm"><i class="far fa-eye"></i></a> </td>
                                 <td><a href="{{ route('clients.edit', $clients->id) }}"
                                         class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a>

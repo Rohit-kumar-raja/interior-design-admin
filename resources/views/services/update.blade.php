@@ -86,7 +86,7 @@
 
                                 <div class="form-group col-sm-12">
                                     <label for="" class="text-dark"> <b> Log Description </b> </label>
-                                    <textarea required name="log_description" type="text" class="form-control" placeholder="massage">{{ $data->log_description }}</textarea>
+                                    <textarea required name="log_description" type="text" class="form-control" placeholder="message">{{ $data->log_description }}</textarea>
                                 </div>
 
                                 <div class="form-group col-sm-4">
@@ -97,7 +97,7 @@
 
                                 <div class="form-group col-sm-8">
                                     <label for="" class="text-dark"> <b> Description 1 </b> </label>
-                                    <textarea name="description1" type="text" class="form-control" placeholder="massage max 255 charecter">{{ $data->description1 }}</textarea>
+                                    <textarea name="description1" type="text" class="form-control" placeholder="message max 255 charecter">{{ $data->description1 }}</textarea>
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="" class="text-dark"> <b> Title 2</b> </label>
@@ -107,7 +107,7 @@
 
                                 <div class="form-group col-sm-8">
                                     <label for="" class="text-dark"> <b> Description 2 </b> </label>
-                                    <textarea name="description2" type="text" class="form-control" placeholder="massage max 255 charecter">{{ $data->description2 }}</textarea>
+                                    <textarea name="description2" type="text" class="form-control" placeholder="message max 255 charecter">{{ $data->description2 }}</textarea>
                                 </div>
 
                                 <div class="form-group col-sm-4">
@@ -118,7 +118,7 @@
 
                                 <div class="form-group col-sm-8">
                                     <label for="" class="text-dark"> <b> Description 3 </b> </label>
-                                    <textarea name="description3" type="text" class="form-control"placeholder="massage max 255 charecter">{{ $data->description3 }}</textarea>
+                                    <textarea name="description3" type="text" class="form-control"placeholder="message max 255 charecter">{{ $data->description3 }}</textarea>
                                 </div>
 
                                 <div class="form-group col-sm-4">
@@ -129,7 +129,7 @@
 
                                 <div class="form-group col-sm-8">
                                     <label for="" class="text-dark"> <b> Description 4 </b> </label>
-                                    <textarea name="description4" type="text" class="form-control" placeholder="massage max 255 charecter">{{ $data->description4 }}</textarea>
+                                    <textarea name="description4" type="text" class="form-control" placeholder="message max 255 charecter">{{ $data->description4 }}</textarea>
                                 </div>
 
                                 <div class="form-group col-sm-4">
@@ -140,7 +140,7 @@
 
                                 <div class="form-group col-sm-8">
                                     <label for="" class="text-dark"> <b> Description 5 </b> </label>
-                                    <textarea name="description5" type="text" class="form-control" placeholder="massage max 255 charecter">{{ $data->description5 }}</textarea>
+                                    <textarea name="description5" type="text" class="form-control" placeholder="message max 255 charecter">{{ $data->description5 }}</textarea>
                                 </div>
 
                                 <div class="form-group col-sm-4">

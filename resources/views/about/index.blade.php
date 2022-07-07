@@ -65,7 +65,7 @@
                             <th>name </th>
                             <th>year </th>
                             <th>images</th>
-                            <th>massage</th>
+                            <th>message</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -77,7 +77,7 @@
                             <th>name </th>
                             <th>year </th>
                             <th>images</th>
-                            <th>massage</th>
+                            <th>message</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -91,14 +91,14 @@
                                 <td>{{ $loop->iteration }}</td>
 
                                 <td> {{ $about->name }} </td>
-                                <td> {{ $about->year }} </td>
+                                <td> {{ $about->Year }} </td>
 
 
                                 <td><img width="100" src="{{ asset('upload/about/' . $about->images) }}">
                                 </td>
 
                                 @include('about.maasage')
-                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default1"
+                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default{{ $about->id}}"
                                         class="btn btn-info btn-sm"><i class="far fa-eye"></i></a> </td>
                                 <td><a href="{{ route('about.edit', $about->id) }}"
                                         class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a>

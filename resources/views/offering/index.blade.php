@@ -65,7 +65,7 @@
                             <th>name </th>
                             <th>Type </th>
                             <th>images</th>
-                            <th>massage</th>
+                            <th>message</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -77,7 +77,7 @@
                             <th>name </th>
                             <th>Type </th>
                             <th>images</th>
-                            <th>massage</th>
+                            <th>message</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -94,7 +94,7 @@
                                 </td>
 
                                 @include('offering.maasage')
-                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default1"
+                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default{{ $offering->id}}"
                                         class="btn btn-info btn-sm"><i class="far fa-eye"></i></a> </td>
                                 <td><a href="{{ route('offering.edit', $offering->id) }}" class="btn btn-warning btn-sm"><i
                                             class="far fa-edit"></i></a>

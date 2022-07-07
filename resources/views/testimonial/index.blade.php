@@ -66,7 +66,7 @@
                             <th>design_name </th>
                             <th>images</th>
                             <th>designation </th>
-                            <th>massage</th>
+                            <th>message</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -79,7 +79,7 @@
                             <th>design_name </th>
                             <th>images</th>
                             <th>designation </th>
-                            <th>massage</th>
+                            <th>message</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -101,7 +101,7 @@
 
                                 <td> {{ $testimonial->virtual_image_name }} </td>
                                 @include('testimonial.maasage')
-                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default1"
+                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default{{ $testimonial->id}}"
                                         class="btn btn-info btn-sm"><i class="far fa-eye"></i></a> </td>
                                 <td><a href="{{ route('testimonial.edit', $testimonial->id) }}"
                                         class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a>

@@ -34,8 +34,8 @@
                                 </select>
                             </div>
                             <div class="form-group col-sm-12">
-                                <label for="" class="text-dark"> <b> Shor Description </b> </label>
-                                <textarea required name="massage" type="text" class="form-control" placeholder="massage"></textarea>
+                                <label for="" class="text-dark"> <b> Short Description </b> </label>
+                                <textarea required name="massage" type="text" class="form-control" placeholder="message"></textarea>
                             </div>
                         </div>
                     </div>

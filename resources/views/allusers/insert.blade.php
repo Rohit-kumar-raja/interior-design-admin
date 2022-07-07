@@ -4,7 +4,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="h6 modal-title"> Add Testimonial </h2><button type="button" class="btn-close"
+                <h2 class="h6 modal-title"> Add User </h2><button type="button" class="btn-close"
                     data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -38,8 +38,8 @@
                                 </select>
                             </div>
                             <div class="form-group col-sm-12">
-                                <label for="" class="text-dark"> <b>massage</b> </label>
-                                <textarea required name="massage" type="text" class="form-control" placeholder="massage"></textarea>
+                                <label for="" class="text-dark"> <b>message</b> </label>
+                                <textarea required name="massage" type="text" class="form-control" placeholder="message"></textarea>
                             </div>
                         </div>
                     </div>

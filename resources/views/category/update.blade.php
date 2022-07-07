@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="form-group col-sm-12">
                                     <label for="" class="text-dark"> <b>Description</b> </label>
-                                    <textarea name="massage" id="massage" class="form-control" placeholder="massage">{{ $data->massage }}</textarea>
+                                    <textarea name="massage" id="massage" class="form-control" placeholder="message">{{ $data->massage }}</textarea>
                                 </div>
                             </div>
                         </div>

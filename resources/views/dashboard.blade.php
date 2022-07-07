@@ -1,4 +1,4 @@
-<x-layout>
+ <x-layout>
     @slot('body')
         <div class="py-4">
             <div class="row justify-content-lg-center">

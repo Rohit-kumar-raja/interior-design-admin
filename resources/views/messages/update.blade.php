@@ -62,8 +62,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-sm-12">
-                                    <label for="" class="text-dark"> <b>massage</b> </label>
-                                    <textarea name="massage" id="massage" class="form-control" placeholder="massage">{{ $data->massage }}</textarea>
+                                    <label for="" class="text-dark"> <b>message</b> </label>
+                                    <textarea name="massage" id="massage" class="form-control" placeholder="message">{{ $data->massage }}</textarea>
 
                                 </div>
                             </div>

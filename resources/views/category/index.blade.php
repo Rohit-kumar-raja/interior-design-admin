@@ -97,7 +97,7 @@
 
                                 <td> {{ $category->virtual_image_name }} </td>
                                 @include('category.maasage')
-                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default1{{$category->id}}"
+                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default{{$category->id}}"
                                         class="btn btn-info btn-sm"><i class="far fa-eye"></i></a> </td>
                                 <td><a href="{{ route('category.edit', $category->id) }}"
                                         class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a>

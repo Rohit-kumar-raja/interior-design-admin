@@ -1,6 +1,6 @@
 <!-- Large modal -->
 
-<div class="modal fade" id="modal-default1" tabindex="-1" aria-labelledby="modal-default" aria-hidden="true">
+<div class="modal fade" id="modal-default{{ $clients->id}}" tabindex="-1" aria-labelledby="modal-default" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">

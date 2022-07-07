@@ -5,12 +5,12 @@
                 <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
                     <li class="breadcrumb-item"><a href="{{ route('dashboard') }}"> <i class="fas fa-home    "></i> </a></li>
                     <li class="breadcrumb-item"><a href="#">{{ env('APP_NAME') }}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Testimonial</li>
+                    <li class="breadcrumb-item active" aria-current="page">User</li>
                 </ol>
             </nav>
             <div class="d-flex justify-content-between w-100 flex-wrap">
                 <div class="mb-3 mb-lg-0 col-10">
-                    <h1 class="h4">Testimonial</h1>
+                    <h1 class="h4">User</h1>
                 </div>
 
             </div>
@@ -62,8 +62,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-sm-12">
-                                    <label for="" class="text-dark"> <b>massage</b> </label>
-                                    <textarea name="massage" id="massage" class="form-control" placeholder="massage">{{ $data->massage }}</textarea>
+                                    <label for="" class="text-dark"> <b>message</b> </label>
+                                    <textarea name="massage" id="massage" class="form-control" placeholder="message">{{ $data->massage }}</textarea>
 
                                 </div>
                             </div>

@@ -66,7 +66,7 @@
                             <th>Phone </th>
                             <th>Email</th>
                             <th>Subject</th>
-                            <th>Massage</th>
+                            <th>Message</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -79,7 +79,7 @@
                             <th>Phone </th>
                             <th>Email</th>
                             <th>Subject</th>
-                            <th>Massage</th>
+                            <th>Message</th>
                             <th>Action 1</th>
                             <th>Action 2</th>
                             <th>Status</th>
@@ -99,7 +99,7 @@
 
 
                                 @include('contactus.maasage')
-                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default1"
+                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default{{ $contactus->id}}"
                                         class="btn btn-info btn-sm"><i class="far fa-eye"></i></a> </td>
                                 <td><a href="{{ route('contactus.edit', $contactus->id) }}"
                                         class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a>
