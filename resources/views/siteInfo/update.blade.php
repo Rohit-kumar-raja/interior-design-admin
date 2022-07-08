@@ -14,6 +14,32 @@
                 </div>
 
             </div>
+            @if (session('store'))
+            <div class="alert alert-success">
+                {{ session('store') }}
+            </div>
+        @endif
+        @if (session('delete'))
+            <div class="alert alert-danger">
+                {{ session('delete') }}
+            </div>
+        @endif
+        @if (session('update'))
+            <div class="alert alert-success">
+                {{ session('update') }}
+            </div>
+        @endif
+        @if (session('status'))
+            <div class="alert alert-secondary">
+                {{ session('status') }}
+            </div>
+        @endif
+        @if (session('status1'))
+            <div class="alert alert-success">
+                {{ session('status1') }}
+            </div>
+        @endif
+
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3 row">

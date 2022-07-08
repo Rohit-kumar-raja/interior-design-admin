@@ -99,8 +99,10 @@ class ServiceController extends Controller
     {
         $id = $request->id;
         Service::where('id', $id)->update($request->except("_token", 'img'));
-        foreach ($request->file('img') as $image) {
-            serviceImage::insertGetId(['name' => $this->insert_image($image, 'services'), 'size' => '0', 'service_id' => $id]);
+        if ($request->file('img')) {
+            foreach ($request->file('img') as $image) {
+                serviceImage::insertGetId(['name' => $this->insert_image($image, 'services'), 'size' => '0', 'service_id' => $id]);
+            }
         }
         return redirect('services')->with(['update' => "Data successfully Updated"]);
     }
