@@ -100,6 +100,9 @@
             <li class="nav-item"><a href="clients" class="nav-link"><span class="sidebar-icon"><i
                             class="far fa-user-tie"></i></span><span class="sidebar-text">Our Client</span></a>
             </li>
+            <li class="nav-item"><a href="siteinfo" class="nav-link"><span class="sidebar-icon"><i
+                class="fa fa-info-circle"></i></span><span class="sidebar-text">Site Info</span></a>
+            </li>
 
             <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700">
 

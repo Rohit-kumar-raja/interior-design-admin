@@ -63,6 +63,7 @@
                         <tr>
                             <th>S.NO</th>
                             <th>name </th>
+                            <th>Design Name</th>
                             <th>images</th>
                             <th>Description</th>
                             <th>Action 1</th>
@@ -74,6 +75,7 @@
                         <tr>
                             <th>S.NO</th>
                             <th>name </th>
+                            <th>Design Name</th>
                             <th>images</th>
                             <th>Description</th>
                             <th>Action 1</th>

@@ -13,6 +13,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\OfferingController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SiteInfoController;
 
 
 // end Dashboard
@@ -62,6 +63,11 @@ Route::get('messages/status/{id}', [MessagesController::class, 'status'])->middl
 Route::get('messages/update/{id}', [MessagesController::class, 'edit'])->middleware('auth')->name('messages.edit');
 Route::post('messages/update', [MessagesController::class, 'update'])->middleware('auth')->name('messages.update');
 // messages end
+
+// site info start
+Route::get('siteinfo', [SiteInfoController::class, 'index'])->middleware('auth')->name('siteinfo');
+Route::post('siteinfo/update', [SiteInfoController::class, 'update'])->middleware('auth')->name('siteinfo.update');
+// site info end
 
 // allusers start
 Route::get('allusers', [AllUsersController::class, 'index'])->middleware('auth')->name('allusers');
