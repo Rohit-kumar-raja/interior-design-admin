@@ -67,9 +67,9 @@
                             <th>Email</th>
                             <th>Subject</th>
                             <th>Message</th>
-                            <th>Action 1</th>
+                            {{-- <th>Action 1</th> --}}
                             <th>Action 2</th>
-                            <th>Status</th>
+                            {{-- <th>Status</th> --}}
                         </tr>
                     </thead>
                     <tfoot class="text-dark">
@@ -80,9 +80,9 @@
                             <th>Email</th>
                             <th>Subject</th>
                             <th>Message</th>
-                            <th>Action 1</th>
+                            {{-- <th>Action 1</th> --}}
                             <th>Action 2</th>
-                            <th>Status</th>
+                            {{-- <th>Status</th> --}}
                         </tr>
                     </tfoot>
                     <tbody>
@@ -101,13 +101,13 @@
                                 @include('contactus.maasage')
                                 <td><a href="#" data-bs-toggle="modal" data-bs-target="#modal-default{{ $contactus->id}}"
                                         class="btn btn-info btn-sm"><i class="far fa-eye"></i></a> </td>
-                                <td><a href="{{ route('contactus.edit', $contactus->id) }}"
+                                {{-- <td><a href="{{ route('contactus.edit', $contactus->id) }}"
                                         class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a>
-                                </td>
+                                </td> --}}
                                 <td><a href="{{ route('contactus.delete', $contactus->id) }}"
                                         class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
                                 </td>
-                                <td><a href="{{ route('contactus.status', $contactus->id) }}"
+                                {{-- <td><a href="{{ route('contactus.status', $contactus->id) }}"
                                         class="btn @if ($contactus->status == 1) btn-success @endif btn-secondary  btn-sm">
                                         @if ($contactus->status == 1)
                                             Active
@@ -115,7 +115,7 @@
                                             Deactive
                                         @endif
                                     </a>
-                                </td>
+                                </td> --}}
                             </tr>
                         @endforeach
                     </tbody>

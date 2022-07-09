@@ -214,7 +214,7 @@ d.addEventListener("DOMContentLoaded", function (event) {
         series: [
             {
                 name: "Sales",
-                data: [95, 52, 78, 45, 19, 53, 60]
+                data: [95, 52, 78, 45, 19, 53, 200,300,100,1000,1000,2000,300, 78, 45, 19, 53, 200,300,100,1000,1000,2000,300,]
             }
         ],
         markers: {
@@ -226,7 +226,7 @@ d.addEventListener("DOMContentLoaded", function (event) {
             }
         },
         xaxis: {
-            categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb'],
+            categories: ['01 Feb', '02 Feb', '03 Feb', '04 Feb', '05 Feb', '06 Feb', '07 Feb',],
             labels: {
                 style: {
                     fontSize: '12px',
